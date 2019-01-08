@@ -1,0 +1,31 @@
+<div class="card">
+    <h3 class="card-header">User Edit</h3>
+    <div class="card-body pt-3 px-4">
+        <form>
+            <input type="hidden" name="id" value="{{.user.Id}}">
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label col-form-label-lg">User Name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control form-control-lg" value="{{.user.Username}}" disabled>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label col-form-label-lg">Role</label>
+              <div class="col-sm-10">
+                    <select class="custom-select form-control form-control-lg" name="level">
+                        <option value="1" {{if eq .user.Level 1}} selected="selected"{{end}}>超级管理员</option>
+                        <option value="2" {{if eq .user.Level 2}} selected="selected"{{end}}>Api 使用者</option>
+                        <option value="99" {{if eq .user.Level 99}} selected="selected"{{end}}>游客</option>
+                    </select>
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-10">
+                <button type="button" class="btn btn-info btn-lg" onClick="javascript :history.back(-1);">Cancel</button>
+                &nbsp;&nbsp;
+                <button type="button" class="btn btn-primary btn-lg" onClick="user_edit()">Save</button>
+              </div>
+            </div>
+          </form>
+    </div>
+</div>

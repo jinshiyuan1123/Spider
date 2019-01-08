@@ -1,0 +1,30 @@
+html,body
+{ 
+    margin:0px; 
+    height:100%;
+} 
+.nav-header{
+    background: black;
+    color: white
+}
+.nav-box{
+    background: #bababa;
+}
+
+.full-height{
+    height: 100%;
+}
+
+.nav-item{
+    font-size: 21px
+}
+
+.nav-item-left{
+    font-size: 25px;
+}
+
+.circle-img{
+    border-radius:50%;
+    height: 36px;
+    width: 36px;
+}
