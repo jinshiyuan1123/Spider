@@ -9,8 +9,6 @@ import (
 	_ "spider/models"
 	_ "spider/routers"
 	"spider/spider"
-	"io"
-	"net/http"
 )
 
 func main() {
@@ -41,9 +39,5 @@ func main() {
 	s := beego.VERSION
 	fmt.Println(s)
 	beego.Run(":8089")
-	http.HandleFunc("/", sayhello)
-	http.ListenAndServe(":8080", nil)
-}
-func sayhello(w http.ResponseWriter, r *http.Request) {
-	io.WriteString(w, "hello world")
+
 }
