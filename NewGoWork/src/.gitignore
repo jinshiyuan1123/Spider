@@ -1,0 +1,4 @@
+*.exe
+*.ext~
+*.log
+config/app.config

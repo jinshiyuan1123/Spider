@@ -1,0 +1,11 @@
+mysql> show index from tblname;
+
+mysql> show keys from tblname;
+
+alter table chapter drop book_id_sort;
+
+alter table chain_book.user add column `token` varchar(100) default null ;
+
+select * from chapter where bookidsort like '29_%' order by id 模糊查询29—— 开头的 并按照 id排序
+
+select * from chapter order by  chapter.book_id , sort  按照两个条件排序 主义要用，分开
